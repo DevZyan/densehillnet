@@ -25,7 +25,7 @@ This project reproduces the methodology and results from the DenseHillNet paper.
 
 ## Setup & Execution
 
-1. Open `DL_proj.ipynb` on Kaggle or Google Colab
+1. Open `Final_Dl_project.ipynb` on Kaggle or Google Colab
 2. Enable GPU runtime (T4 recommended)
 3. Download the dataset from Kaggle:  
    [Intel Image Classification](https://www.kaggle.com/datasets/puneet6060/intel-image-classification)
@@ -171,7 +171,7 @@ Compares DenseHillNet against the CNN_OBIA baseline from Robson et al. (2020).
 ```
 DenseHillNet-Classification/
 │
-├── DL_proj.ipynb    ← Main notebook (all 10 sections)
+├── Final_Dl_project.ipynb    ← Main notebook (all 10 sections)
 └── README.md
 ```
 ---
