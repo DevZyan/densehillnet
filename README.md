@@ -37,12 +37,12 @@ This project reproduces the methodology and results from the DenseHillNet paper.
 
 - **Source:** Intel Image Classification (Kaggle)
 - **Classes Used:** Glacier, Mountain (binary classification)
-- **Total Images:** 3,096
-  - Glacier: 1,561 images
-  - Mountain: 1,535 images
-- **Train/Test Split:** 50% / 50%
-  - Training set: 780 glacier + 781 mountain
-  - Test set: 767 glacier + 768 mountain
+- **Total Images:** 5,994
+  - Glacier: 2,957 images
+  - Mountain: 3,037 images
+- **Train/Test Split:**
+  - Training set: 2404 glacier + 2512 mountain
+  - Test set: 553 glacier + 525 mountain
 - **Preprocessing:**
   - Images resized to 224×224
   - Pixel values rescaled to [0, 1]
