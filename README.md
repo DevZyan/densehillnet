@@ -19,7 +19,7 @@
 
 ## Project Overview
 
-This project reproduces the methodology and results from the DenseHillNet paper. The study proposes a DenseNet121-based lightweight CNN architecture for binary classification of natural images into two categories: **Glacier** and **Mountain**. The model achieves 86% accuracy on a dataset of 3,096 images, outperforming the CNN_OBIA baseline (72%).
+This project reproduces the methodology and results from the DenseHillNet paper. The study proposes a DenseNet121-based lightweight CNN architecture for binary classification of natural images into two categories: **Glacier** and **Mountain**. The model achieves **87% accuracy** on a dataset of 3,096 images, outperforming the CNN_OBIA baseline (72%).
 
 ---
 
@@ -64,9 +64,9 @@ DenseHillNet is built on the **DenseNet121** backbone with custom classification
 - Dense (30 neurons, ReLU)
 - Dense (2 neurons, Softmax) — output layer
 
-**Total parameters:** 9,549,006  
-**Trainable parameters:** 2,511,502  
-**Non-trainable parameters:** 7,037,504  
+**Total parameters:** 9,552,042  
+**Trainable parameters:** 2,512,490  
+**Non-trainable parameters:** 7,039,552  
 
 **Training configuration:**
 - Optimizer: Adam
@@ -158,12 +158,41 @@ Compares DenseHillNet against the CNN_OBIA baseline from Robson et al. (2020).
 | glacier/20109.jpg | Glacier | Mountain | ❌ False Mountain |
 | glacier/20111.jpg | Glacier | Glacier | ✅ True Glacier |
 
+### Confusion Matrix
+
+| | Pred Glacier | Pred Mountain |
+|---|---|---|
+| **Act Glacier** | 459 | 94 |
+| **Act Mountain** | 45 | 480 |
+
+### Classification Report (Table 7)
+
+| Class | Precision | Recall | F1-Score |
+|-------|-----------|--------|----------|
+| Glacier | 0.91 | 0.83 | 0.87 |
+| Mountain | 0.84 | 0.91 | 0.87 |
+| Macro Avg | 0.87 | 0.87 | 0.87 |
+| **Accuracy** | | | **0.87** |
+
+### ROC Curve & Error Metrics
+
+- **AUC:** 0.9396  
+- **MAE:** 0.1289
+
+### Misclassification Analysis
+
+- **Total misclassified:** 139 out of 1078
+  - False Glacier (Mountains predicted as Glacier): 45
+  - False Mountain (Glaciers predicted as Mountain): 94
+
 ### Benchmark Comparison (Table 9)
 
 | Model | Accuracy |
 |-------|----------|
-| CNN_OBIA (Robson et al., 2020) | 72% |
-| **DenseHillNet (Ours)** | **86%** |
+| CNN_OBIA (Robson et al., 2020) | 72.0% |
+| **DenseHillNet (Ours)** | **87.1%** |
+
+**Improvement: +15.1 percentage points**
 
 ---
 
