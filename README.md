@@ -85,7 +85,7 @@ Sets up the dataset directory structure and loads glacier and mountain images us
 Splits data 50/50 into training and test sets.  
 
 ### Section 3 & 4 — Preprocessing & Architecture
-*(Gande Rani, 24AI10008)*  
+*(Devesh Marya, 24AI10024)*  
 Applies augmentation transforms to the training data including rescaling, shearing, zooming, and horizontal flipping.  
 Builds the DenseHillNet model by loading the pretrained DenseNet121 backbone, freezing its weights, and appending custom dense layers.   
 Compiles the model with Adam optimizer and categorical crossentropy loss.  
@@ -102,7 +102,7 @@ Computes and visualizes the full confusion matrix on the test set.
 Generates the classification report with precision, recall, and F1-score for each class. Plots the ROC curve and computes the AUC score and Mean Absolute Error.  
 
 ### Section 9 & 10 — Misclassification Analysis & Benchmark
-*(Devesh Marya, 24AI10024)*  
+*(Gande Rani, 24AI10008)*  
 Identifies and analyzes misclassified images — false glaciers and false mountains.   
 Explains why ambiguous terrain (snowy mountains, bare glaciers) causes errors.   
 Compares DenseHillNet against the CNN_OBIA baseline from Robson et al. (2020).
